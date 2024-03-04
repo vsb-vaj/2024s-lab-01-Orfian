@@ -7,7 +7,11 @@
 
 // Your code:
 const arrayOfMultiples = (num, length) => {
-    // ... write code ...
+    let res = [];
+    for (let i = 1; i <= length; i++) {
+        res.push(num * i);
+    }
+    return res;
 };
 
 // 2 =================================
@@ -20,7 +24,7 @@ const arrayOfMultiples = (num, length) => {
 
 // Your code:
 const changeDirection = (array) => {
-// ... write code ...
+    return array.reverse();
 };
 
 // 3 =================================
@@ -31,5 +35,11 @@ const changeDirection = (array) => {
 
 // Your code:
 const biggerArray = (array1, array2) => {
-// ... write code ...
+    let sum1 = array1.reduce((a, b) => a + b, 0);
+    let sum2 = array2.reduce((a, b) => a + b, 0);
+    if (sum1 > sum2) {
+        return {array: array1, sum: sum1};
+    } else {
+        return {array: array2, sum: sum2};
+    }
 };
